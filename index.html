@@ -1,8 +1,4 @@
-!<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,16 +6,81 @@
     <title>Daily Forecast</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-
-    <script src="script.js" async defer></script>
+    <section class="Forecast">
+      <h1>Weather Caster</h1>
+      <p id="cityname">San Francisco</p>
+      <p id="currentDay" class="lead"></p>
+      <aside class="temperature">50&deg;F</aside>
+    </section>
+    <aside class="city-time"></aside>
+    <section class="section1">
+      <p id="inputcontainer">City: <input type="text" id="cityinput" /></p>
+      <button>Search City</button>
+      <ul class="cities">
+        <li class="city">California</li>
+        <li class="city">Paris</li>
+        <li class="city">Dubai</li>
+        <li class="city">Tokyo</li>
+        <li class="city">New York</li>
+      </ul>
+      <ul class="weather-details">
+        <h2>Weather Conditions</h2>
+        <li>
+          <span>Windy</span>
+          <span class="wind">5km/h</span>
+        </li>
+        <li>
+          <span>Rain</span>
+          <span class="rain">30%</span>
+        </li>
+        <li>
+          <span>Cloudy</span>
+          <span class="cloud">70%</span>
+        </li>
+        <li>
+          <span>Humidity</span>
+          <span class="humidity">50%</span>
+        </li>
+      </ul>
+      <div class="container-cards px-5"></div>
+      <div class="weather">
+        <div class="today" id="current-temp">
+          <div class="day">Mon</div>
+          <div class="temperature">25&deg;</div>
+          <div class="conditon-wind"></div>
+          <div class="conditon-humidity"></div>
+        </div>
+        <div class="weathe">
+          <div class="today" id="current-temp">
+            <div class="day">Tue</div>
+            <div class="temperature">25&deg;</div>
+            <div class="conditon-wind"></div>
+            <div class="conditon-humidity">
+            </div>
+            <div class="weather">
+              <div class="today" id="current-temp">
+                <div class="day">Wed</div>
+                <div class="temperature">25&deg;</div>
+                <div class="conditon-wind"></div>
+                <div class="conditon-humidity">
+                </div>
+                <div class="weather">
+                  <div class="today" id="current-temp">
+                    <div class="day">Thu</div>
+                    <div class="temperature">25&deg;</div>
+                    <div class="conditon-wind"></div>
+                    <div class="conditon-humidity">
+                    </div>
+                    <div class="weather">
+                      <div class="today" id="current-temp">
+                        <div class="day">Fri</div>
+                        <div class="temperature">25&deg;</div>
+                        <div class="conditon-wind"></div>
+                        <div class="conditon-humidity"></div>
+    </section>
+    <script src="assets/script.js" async defer></script>
   </body>
 </html>
