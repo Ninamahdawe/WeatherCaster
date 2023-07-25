@@ -15,10 +15,14 @@
       <p id="currentDay" class="lead"></p>
       <aside class="temperature">50&deg;F</aside>
     </section>
+              <!-- not sure if this is needed 
+
     <aside class="city-time"></aside>
+    ---->
     <section class="section1">
-      <p id="inputcontainer">City: <input type="text" id="cityinput" /></p>
+      <p id="inputcontainer">City: <input type="text" id="cityinput" placeholder="Enter City"/></p>
       <button>Search City</button>
+          <!-- not sure if this is needed 
       <ul class="cities">
         <li class="city">California</li>
         <li class="city">Paris</li>
@@ -26,8 +30,9 @@
         <li class="city">Tokyo</li>
         <li class="city">New York</li>
       </ul>
+      -->
       <ul class="weather-details">
-        <h2>Weather Conditions</h2>
+        <h2></h2>
         <li>
           <span>Windy</span>
           <span class="wind">5km/h</span>
@@ -46,37 +51,48 @@
         </li>
       </ul>
       <div class="container-cards px-5"></div>
-      <div class="weather">
+      <div class="weather-card">
         <div class="today" id="current-temp">
           <div class="day">Mon</div>
+          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+          class="weather-icon">
           <div class="temperature">25&deg;</div>
           <div class="conditon-wind"></div>
           <div class="conditon-humidity"></div>
         </div>
+        <div class="weather-card">
         <div class="weathe">
           <div class="today" id="current-temp">
             <div class="day">Tue</div>
+            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+          class="weather-icon">
             <div class="temperature">25&deg;</div>
             <div class="conditon-wind"></div>
             <div class="conditon-humidity">
             </div>
-            <div class="weather">
+            <div class="weather-card">
               <div class="today" id="current-temp">
                 <div class="day">Wed</div>
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+          class="weather-icon">
                 <div class="temperature">25&deg;</div>
                 <div class="conditon-wind"></div>
                 <div class="conditon-humidity">
                 </div>
-                <div class="weather">
+                <div class="weather-card">
                   <div class="today" id="current-temp">
                     <div class="day">Thu</div>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+          class="weather-icon">
                     <div class="temperature">25&deg;</div>
                     <div class="conditon-wind"></div>
                     <div class="conditon-humidity">
                     </div>
-                    <div class="weather">
+                    <div class="weather-card">
                       <div class="today" id="current-temp">
                         <div class="day">Fri</div>
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+          class="weather-icon">
                         <div class="temperature">25&deg;</div>
                         <div class="conditon-wind"></div>
                         <div class="conditon-humidity"></div>
