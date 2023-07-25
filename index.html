@@ -15,43 +15,28 @@
       <p id="currentDay" class="lead"></p>
       <aside class="temperature">50&deg;F</aside>
     </section>
-              <!-- not sure if this is needed 
-
-    <aside class="city-time"></aside>
-    ---->
     <section class="section1">
       <p id="inputcontainer">City: <input type="text" id="cityinput" placeholder="Enter City"/></p>
       <button>Search City</button>
-          <!-- not sure if this is needed 
-      <ul class="cities">
-        <li class="city">California</li>
-        <li class="city">Paris</li>
-        <li class="city">Dubai</li>
-        <li class="city">Tokyo</li>
-        <li class="city">New York</li>
-      </ul>
-      -->
-      <!-- not sure if this is needed
-      <ul class="weather-details">
-        <h2></h2>
-        <li>
-          <span>Windy</span>
-          <span class="wind">5km/h</span>
-        </li>
-        <li>
-          <span>Rain</span>
-          <span class="rain">30%</span>
-        </li>
-        <li>
-          <span>Cloudy</span>
-          <span class="cloud">70%</span>
-        </li>
-        <li>
-          <span>Humidity</span>
-          <span class="humidity">50%</span>
-        </li>
-      </ul>
-         -->
+      <button class="clear-btn" type="submit" id="clear-button">Clear Search</button>
+      <div class="past-cities" id="cities-list">
+        <button data-city="California">California</button>
+        <button data-city="paris">Paris</button>
+        <button data-city="dubai">Dubai</button>
+        <button data-city="tokyo">Tokyo</button>
+      </div>
+    </section>
+    
+   <div class="weather-details">
+        <div class="weather-items">
+        <h2 class="title">City Date: <span id="city-date"></span></h2>
+        <p class="text">Temperature: <span id="city-temp">45&deg;</span></p>
+        <p class="text">Wind:<span id="city-wind">5Km/h</span></p>
+        <p class="text">Rain: <span id="city-rain">30%</span></p>
+        <p class="text">Cloud:<span id="city-cloud">70%</span></p>
+        <p class="text">Humidity:<span id="city-humidity">50%</span></p>
+        </div>
+
       <div class="container-cast "></div>
         <div class="today" id="current-temp">
           <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
@@ -97,7 +82,11 @@
                         <div class="temperature">25&deg;</div>
                         <div class="conditon-wind"></div>
                         <div class="conditon-humidity"></div>
-    </section>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+   
     <script src="assets/script.js" async defer></script>
   </body>
 </html>
