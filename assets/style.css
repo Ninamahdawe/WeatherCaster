@@ -54,6 +54,7 @@ p#cityname {
   padding: 20px;
   border-radius: 8px;
   margin: 20px auto;
+  border: 1px solid #eee;
 }
 
 #inputcontainer {
@@ -116,34 +117,58 @@ button:hover {
   background-color: #df897a;
 }
 
-.container-future {
+.today-container {
   display: flex;
   background: rgba(0, 0, 0, 0.2);
-  width: 75%;
+  width: 40%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 100px;
+  padding: 20px;
   border-radius: 8px;
   margin: 20px auto;
+  justify-content: center;
+  border: 1px solid #eee;
 }
-.container-future .today {
+
+.today {
+  padding: 6px;
+}
+
+.future-container {
+  padding: 15px;
   display: flex;
+  color: white;
+  align-items: center;
+  margin: 0;
+  transform: translateX(-50px);
+  gap: 30px;
+}
+
+.future-container .city-date {
+  display: flex;
+  font-weight: bolder;
   align-items: center;
   justify-content: center;
   border: 1px solid #eee;
   border-radius: 10px;
   padding: 15px;
-  padding-right: 40px;
+  padding-right: 20px;
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
 }
-.container-future .today .day {
-  padding: 5px 15px;
-  background: #eee;
-  border-radius: 50px;
-  text-align: center;
+
+.future-results {
+  display: flex;
+  border: 1px solid #eee;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 25px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  transform: translateX(40px) translateY(30px);
 }
-.container-future .today .temperature {
-  font-size: 30px;
-  padding-top: 10px;
+
+h3 {
+  font-size: 40px;
 }
-.container-future;

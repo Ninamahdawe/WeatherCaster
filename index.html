@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
-    <section class="current-Forecast">
+    <section class="today-container">
       <div id="today-forecast">
       <div class="today">
       <p id="cityname">San Francisco</p>
@@ -43,10 +43,11 @@
   -->
       <div class="future-container ">
         <h3>5 Day Forecast:</h3>
+        <div class="future-results">
         <div class="future">
+           <!----
           <p class="city-date" id="city-date"></p>
-          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
-          class="weather-icon">
+          -->
           </div>
           <div>
             <p class="city-temp" id="city-temp"></p>
@@ -54,7 +55,8 @@
             <p class="city-humidity" id="city-humidity"></p>
           </div>
 
-        <div class="future-container"></div>
+        <div class="future-container">
+          <div class="future-results">
           <div   class="future">
             <p class="city-date" id="city-date">Monday</p>
             <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
@@ -64,8 +66,10 @@
               <p class="city-wind" id="city-wind"></p>
               <p class="city-humidity" id="city-humidity"></p>
             </div>
-
-            <div class="future-container"></div>
+          </div>
+        </div>
+            <div class="future-container">
+            <div class="future-results">
             <div   class="future">
               <p class="city-date" id="city-date">Tue</p>
               <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
@@ -75,34 +79,44 @@
                 <p class="city-wind" id="city-wind"></p>
                 <p class="city-humidity" id="city-humidity"></p>
               </div>
-
-              <div class="future-container"></div>
+            </div>
+          </div>
+              <div class="future-container">
+                <div class="future-results">
             <div   class="future">
               <p class="city-date" id="city-date">Wed</p>
               <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
               class="weather-icon">
               <div>
+              </div>
+              </div>
                 <p class="city-temp" id="city-temp"></p>
                 <p class="city-wind" id="city-wind"></p>
                 <p class="city-humidity" id="city-humidity"></p>
               </div>
-              <div class="future-container"></div>
+              <div class="future-container">
+              <div class="future-results">
               <div   class="future">
                 <p class="city-date" id="city-date">Thus</p>
                 <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
                 class="weather-icon">
                 <div>
+                </div>
+              </div>
                   <p class="city-temp" id="city-temp"></p>
                   <p class="city-wind" id="city-wind"></p>
                   <p class="city-humidity" id="city-humidity"></p>
                 </div>
 
-                <div class="future-container"></div>
+                <div class="future-container">
+                  <div class="future-results">
                 <div   class="future">
                   <p class="city-date" id="city-date">Fri</p>
                   <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
                   class="weather-icon">
-                  <div>
+                </div>
+                  </div>
+                </div>
                     <p class="city-temp" id="city-temp"></p>
                     <p class="city-wind" id="city-wind"></p>
                     <p class="city-humidity" id="city-humidity"></p>
