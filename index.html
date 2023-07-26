@@ -9,12 +9,16 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
-    <section class="Forecast">
-      <h1>Weather Caster</h1>
+    <section class="current-Forecast">
+      <div id="today-forecast">
+      <div class="today">
       <p id="cityname">San Francisco</p>
       <p id="currentDay" class="lead"></p>
+      <p id="city-wind"></p>
+      <p id="city-humidity"></p>
       <aside class="temperature">50&deg;F</aside>
     </section>
+    <div>
     <section class="section1">
       <p id="inputcontainer">City: <input type="text" id="cityinput" placeholder="Enter City"/></p>
       <button>Search City</button>
@@ -26,7 +30,7 @@
         <button data-city="tokyo">Tokyo</button>
       </div>
     </section>
-    
+  <!---- not sure where to place this 
    <div class="weather-details">
         <div class="weather-items">
         <h2 class="title">City Date: <span id="city-date"></span></h2>
@@ -36,56 +40,82 @@
         <p class="text">Cloud:<span id="city-cloud">70%</span></p>
         <p class="text">Humidity:<span id="city-humidity">50%</span></p>
         </div>
-
-      <div class="container-cast "></div>
-        <div class="today" id="current-temp">
+  -->
+      <div class="future-container ">
+        <h3>5 Day Forecast:</h3>
+        <div class="future">
+          <p class="city-date" id="city-date"></p>
           <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
           class="weather-icon">
-          <div class="day">Mon</div>
-          <div class="temperature">25&deg;</div>
-          <div class="conditon-wind"></div>
-          <div class="conditon-humidity"></div>
-        </div>
-        <div class="weather-card" id="weather-card">
-          <div class="weather-card-item"></div>
-          <div class="today" id="current-temp">
-            <div class="day">Tue</div>
+          </div>
+          <div>
+            <p class="city-temp" id="city-temp"></p>
+            <p class="city-wind" id="city-wind"></p>
+            <p class="city-humidity" id="city-humidity"></p>
+          </div>
+
+        <div class="future-container"></div>
+          <div   class="future">
+            <p class="city-date" id="city-date">Monday</p>
             <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
-          class="weather-icon">
-            <div class="temperature">25&deg;</div>
-            <div class="conditon-wind"></div>
-            <div class="conditon-humidity">
+            class="weather-icon">
+            <div>
+              <p class="city-temp" id="city-temp"></p>
+              <p class="city-wind" id="city-wind"></p>
+              <p class="city-humidity" id="city-humidity"></p>
             </div>
-            <div class="weather-card-item" >
-              <div class="today" id="current-temp">
-                <div class="day">Wed</div>
+
+            <div class="future-container"></div>
+            <div   class="future">
+              <p class="city-date" id="city-date">Tue</p>
+              <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+              class="weather-icon">
+              <div>
+                <p class="city-temp" id="city-temp"></p>
+                <p class="city-wind" id="city-wind"></p>
+                <p class="city-humidity" id="city-humidity"></p>
+              </div>
+
+              <div class="future-container"></div>
+            <div   class="future">
+              <p class="city-date" id="city-date">Wed</p>
+              <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+              class="weather-icon">
+              <div>
+                <p class="city-temp" id="city-temp"></p>
+                <p class="city-wind" id="city-wind"></p>
+                <p class="city-humidity" id="city-humidity"></p>
+              </div>
+              <div class="future-container"></div>
+              <div   class="future">
+                <p class="city-date" id="city-date">Thus</p>
                 <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
-          class="weather-icon">
-                <div class="temperature">25&deg;</div>
-                <div class="conditon-wind"></div>
-                <div class="conditon-humidity">
+                class="weather-icon">
+                <div>
+                  <p class="city-temp" id="city-temp"></p>
+                  <p class="city-wind" id="city-wind"></p>
+                  <p class="city-humidity" id="city-humidity"></p>
                 </div>
-                <div class="weather-card-item" >
-                  <div class="today" id="current-temp">
-                    <div class="day">Thu</div>
-                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
-          class="weather-icon">
-                    <div class="temperature">25&deg;</div>
-                    <div class="conditon-wind"></div>
-                    <div class="conditon-humidity">
-                    </div>
-                    <div class="weather-card-item">
-                      <div class="today" id="current-temp">
-                        <div class="day">Fri</div>
-                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
-          class="weather-icon">
-                        <div class="temperature">25&deg;</div>
-                        <div class="conditon-wind"></div>
-                        <div class="conditon-humidity"></div>
-                      </div>
-                    </div>
+
+                <div class="future-container"></div>
+                <div   class="future">
+                  <p class="city-date" id="city-date">Fri</p>
+                  <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+                  class="weather-icon">
+                  <div>
+                    <p class="city-temp" id="city-temp"></p>
+                    <p class="city-wind" id="city-wind"></p>
+                    <p class="city-humidity" id="city-humidity"></p>
                   </div>
-                </div>
+
+
+
+
+
+
+
+
+      
    
     <script src="assets/script.js" async defer></script>
   </body>
