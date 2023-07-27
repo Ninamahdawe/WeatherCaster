@@ -1,10 +1,10 @@
-# # Weather Caster
+## Weather Caster
 
-# # Description
+## Description
 
 The Weather Caster is a weather application designed to provide you with real-time and accurate weather forecasts, making it your go-to app for all things weather-related. Whether you're planning a weekend getaway or a hiking trip this app has got you covered!
 
-# # Usage
+## Usage
 
 - Enter City: In the input field at the top of the page, the user willtype the name of the city for which the user want to get the weather forecast.
 
