@@ -18,9 +18,10 @@ $(document).ready(function () {
 
         // Get the city name from the input field and remove whitespace.
         const city = cityInput.val().trim();
-
+        var pastCities = JSON.parse(localStorage.getItem("city")) || [];
+        pastCities.push(city)
         // Save the city name in local storage .
-        localStorage.setItem("city", JSON.stringify(city));
+        localStorage.setItem("city", JSON.stringify(pastCities));
         // city = "Dubai"
         if (city) {
             getWeatherData(city);
@@ -49,7 +50,7 @@ $(document).ready(function () {
         // URL to get latitude and longitude for the selected city from OpenWeatherMap API.
 
         var apiUrl =
-            "https://api.openweathermap.org/geo/1.0/direct?" +
+            "http://api.openweathermap.org/geo/1.0/direct?" +
             "q=" +
             city +
             "&limit=5&appid=" +
@@ -74,7 +75,7 @@ $(document).ready(function () {
                 var lon = data[0].lon;
 
                 var weatherUrl =
-                    "https://api.openweathermap.org/data/2.5/forecast?" +
+                    "http://api.openweathermap.org/data/2.5/forecast?" +
                     "lat=" +
                     lat +
                     "&lon=" +
@@ -104,7 +105,7 @@ $(document).ready(function () {
                             var forecast = forecastData[i];
                             var futureDate = dayjs(forecast.dt_txt).format("dddd");
                             var iconUrl =
-                                "https://openweathermap.org/img/wn/" +
+                                "http://openweathermap.org/img/wn/" +
                                 forecast.weather[0].icon +
                                 ".png";
                             $("#city-date" + j).text(futureDate);

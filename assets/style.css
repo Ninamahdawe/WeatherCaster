@@ -221,6 +221,7 @@ h3 {
 }
 
 /* Styles for mobile and tablet screens */
+/* 
 @media (max-width: 768px) {
   .section1 {
     flex-direction: column;
@@ -244,5 +245,27 @@ h3 {
   .today-container,
   .today {
     width: 90%;
+  }
+}
+*/
+.testContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+
+.cardEx {
+  height: 20vh;
+  width: 20%;
+  min-width: 400px;
+  margin: 10px 0;
+  border: black solid 1px;
+}
+
+@media screen and (min-width: 1177px) {
+  .testContainer {
+    flex-direction: column;
   }
 }

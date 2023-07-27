@@ -21,47 +21,23 @@
         <p id="city-humidity"></p>
         <aside class="temperature">50&deg;F</aside>
   </section>
-  <div>
-    <section class="section1">
-      <p id="inputcontainer">City : <input type="text" id="cityinput" placeholder="Enter City" /></p>
-      <button id="search">Search City</button>
-      <button class="clear-btn" type="submit" id="clear-button">Clear Search</button>
-      <div class="past-cities" id="cities-list">
-        <button data-city="California">California</button>
-        <button data-city="paris">Paris</button>
-        <button data-city="dubai">Dubai</button>
-        <button data-city="tokyo">Tokyo</button>
-      </div>
-    </section>
-    <!---- not sure where to place this 
-   <div class="weather-details">
-        <div class="weather-items">
-        <h2 class="title">City Date: <span id="city-date"></span></h2>
-        <p class="text">Temperature: <span id="city-temp">45&deg;</span></p>
-        <p class="text">Wind:<span id="city-wind">5Km/h</span></p>
-        <p class="text">Rain: <span id="city-rain">30%</span></p>
-        <p class="text">Cloud:<span id="city-cloud">70%</span></p>
-        <p class="text">Humidity:<span id="city-humidity">50%</span></p>
-        </div>
-  -->
-    <div class="future-container ">
-      <h3>5 Day Forecast:</h3>
-      <!----
-      <div class="future-results">
-        <div class="future0">
-        
-          <p class="city-date" id="city-date"></p>
-          
-        </div>
-        <div>
-          <p class="city-temp" id="city-temp"></p>
-          <p class="city-wind" id="city-wind"></p>
-          <p class="city-humidity" id="city-humidity"></p>
-        </div>
-          ---->
+
+  <section class="section1">
+    <p id="inputcontainer">City : <input type="text" id="cityinput" placeholder="Enter City" /></p>
+    <button id="search">Search City</button>
+    <button class="clear-btn" type="submit" id="clear-button">Clear Search</button>
+    <div class="past-cities" id="cities-list">
+      <button data-city="California">California</button>
+      <button data-city="paris">Paris</button>
+      <button data-city="dubai">Dubai</button>
+      <button data-city="tokyo">Tokyo</button>
     </div>
-  </div>
-  <div class="future-container">
+  </section>
+  <div class="future-container ">
+    <h3>5 Day Forecast:</h3>
+
+
+
     <div class="future-results">
       <div class="future">
         <p class="city-date" id="city-date1">Monday</p>
@@ -73,8 +49,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="future-container">
+
     <div class="future-results">
       <div class="future">
         <p class="city-date" id="city-date2">Tue</p>
@@ -86,8 +61,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="future-container">
+
     <div class="future-results">
       <div class="future">
         <p class="city-date" id="city-date3">Wed</p>
@@ -99,8 +73,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="future-container">
+ 
     <div class="future-results">
       <div class="future">
         <p class="city-date" id="city-date4">Thus</p>
@@ -113,8 +86,7 @@
       </div>
 
     </div>
-  </div>
-  <div class="future-container">
+
     <div class="future-results">
       <div class="future">
         <p class="city-date" id="city-date5">Fri</p>
@@ -126,8 +98,23 @@
         </div>
       </div>
     </div>
+
   </div>
 
+  </div>
+  <div class="testContainer">
+    <div class="cardEx">
+
+    </div>
+    <div class="cardEx">
+
+    </div>
+    <div class="cardEx">
+
+    </div>
+    <div class="cardEx">
+
+    </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
