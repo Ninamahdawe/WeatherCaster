@@ -19,6 +19,7 @@ $(document).ready(function () {
         // Get the city name from the input field and remove whitespace.
         const city = cityInput.val().trim();
         var pastCities = JSON.parse(localStorage.getItem("city")) || [];
+        console.log("Past cities retrieved from local storage:", pastCities);
 
         if (!Array.isArray(pastCities)) {
             pastCities = [];
@@ -26,6 +27,8 @@ $(document).ready(function () {
         pastCities.push(city);
         // Save the city name in local storage .
         localStorage.setItem("city", JSON.stringify(pastCities));
+        console.log("Past cities saved to local storage:", pastCities);
+
         // city = "Dubai"
         if (city) {
             getWeatherData(city);
@@ -41,6 +44,7 @@ $(document).ready(function () {
         console.log("past city button clicked");
         var city = $(this).data("city");
         getWeatherData(city);
+
     });
 
     // To access (fetch) weather data for a given city.
