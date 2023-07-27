@@ -22,6 +22,8 @@ The Weather Caster is a weather application designed to provide you with real-ti
 
 ![website screenshot](/assets/images/WeatherCaster_.png)
 
+![Website](https://ninamahdawe.github.io/WeatherCaster/)
+
 ## source code
 
 source code is located in assets.
