@@ -96,6 +96,14 @@ button#clear-button.clear-btn {
   transform: translateX(-150px) translateY(5px);
 }
 
+div#cities-list.past-cities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
 div#cities-list.past-cities button {
   justify-content: space-between;
   padding: 10px 20px;
@@ -105,8 +113,6 @@ div#cities-list.past-cities button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 20px;
-  margin: 0 5px;
 }
 
 #cities-list.past-cities button:hover {
