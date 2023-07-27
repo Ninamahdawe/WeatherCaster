@@ -19,6 +19,10 @@ $(document).ready(function () {
         // Get the city name from the input field and remove whitespace.
         const city = cityInput.val().trim();
         var pastCities = JSON.parse(localStorage.getItem("city")) || [];
+
+        if (!Array.isArray(pastCities)) {
+            pastCities = [];
+        }
         pastCities.push(city);
         // Save the city name in local storage .
         localStorage.setItem("city", JSON.stringify(pastCities));
