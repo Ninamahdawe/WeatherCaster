@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Daily Forecast</title>
+    <title>Weather Forecast</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/style.css" />
@@ -12,6 +12,7 @@
     <section class="today-container">
       <div id="today-forecast">
       <div class="today">
+        <p class="lead">Get Ready For upcoming weather</p>
       <p id="cityname">San Francisco</p>
       <p id="currentDay" class="lead"></p>
       <p id="city-wind"></p>
@@ -21,7 +22,7 @@
     <div>
     <section class="section1">
       <p id="inputcontainer">City: <input type="text" id="cityinput" placeholder="Enter City"/></p>
-      <button>Search City</button>
+      <button  id="search">Search City</button>
       <button class="clear-btn" type="submit" id="clear-button">Clear Search</button>
       <div class="past-cities" id="cities-list">
         <button data-city="California">California</button>
@@ -122,15 +123,9 @@
                     <p class="city-humidity" id="city-humidity"></p>
                   </div>
 
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 
-
-
-
-
-
-
-      
-   
     <script src="assets/script.js" async defer></script>
   </body>
 </html>
