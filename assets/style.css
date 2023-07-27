@@ -117,7 +117,8 @@ input#cityinput:hover {
   cursor: pointer;
 }
 
-button {
+button#search {
+  justify-content: space-between;
   padding: 10px 20px;
   font-size: 16px;
   background-color: #f68308;
@@ -125,13 +126,18 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 20px;
-  margin: 0 5px;
-  transform: translateX(-80px) translateY(4px);
+  margin-right: auto;
 }
 
-button#clear-button.clear-btn {
-  transform: translateX(-150px) translateY(5px);
+button#clear-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f68308;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: auto;
 }
 
 div#cities-list.past-cities {
@@ -139,7 +145,6 @@ div#cities-list.past-cities {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-top: 10px;
 }
 
 div#cities-list.past-cities button {
@@ -177,18 +182,24 @@ button:hover {
   padding: 6px;
 }
 
-.future-container {
-  padding: 15px;
-  display: flex;
-  color: white;
-  align-items: center;
-  margin: 0;
-  transform: translateX(-40px);
-  gap: 30px;
+h3 {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.future-container .city-date {
+.future-container {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+
+.city-date {
+  display: flex;
+  color: #fff;
   font-weight: bolder;
   align-items: center;
   justify-content: center;
@@ -201,71 +212,11 @@ button:hover {
 }
 
 .future-results {
-  display: flex;
   border: 1px solid #eee;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px;
-  padding: 25px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
-  transform: translateX(40px) translateY(30px);
-  width: calc(20% - 20px);
-  margin-right: 10px;
-  margin-bottom: 10px;
-  justify-content: center;
-}
-
-h3 {
-  font-size: 40px;
-}
-
-/* Styles for mobile and tablet screens */
-/* 
-@media (max-width: 768px) {
-  .section1 {
-    flex-direction: column;
-    width: 90%;
-  }
-
-  .future-container {
-    flex-direction: column;
-    align-items: center;
-    transform: translateX(0);
-    gap: 15px;
-  }
-
-  .future-results {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 15px;
-    transform: translateX(0) translateY(0);
-  }
-
-  .today-container,
-  .today {
-    width: 90%;
-  }
-}
-*/
-.testContainer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 30px;
-}
-
-.cardEx {
   height: 20vh;
   width: 20%;
   min-width: 400px;
   margin: 10px 0;
-  border: black solid 1px;
-}
-
-@media screen and (min-width: 1177px) {
-  .testContainer {
-    flex-direction: column;
-  }
 }
