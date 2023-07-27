@@ -28,6 +28,7 @@ $(document).ready(function () {
         getWeatherData(city);
     });
 
+
     function getWeatherData(city) {
         console.log(city)
 
@@ -67,7 +68,6 @@ $(document).ready(function () {
                         }
 
                         var forecastData = weatherData.list;
-
                         for (var i = 0; i < forecastData.length; i++) {
                             var forecast = forecastData[i];
                             var futureDate = dayjs(forecast.dt_txt).format("dddd");
