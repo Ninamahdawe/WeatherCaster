@@ -11,9 +11,12 @@ $(document).ready(function () {
     searchButton.click(function () {
         console.log("search button clicked")
         const city = cityInput.val().trim();
+
+        localStorage.setItem("city", JSON.stringify(city))
         // city = "Dubai"
         if (city) {
             getWeatherData(city);
+
 
         }
     });
@@ -51,7 +54,7 @@ $(document).ready(function () {
                 var lat = data[0].lat;
                 var lon = data[0].lon;
 
-                var weatherUrl = "https://api.openweathermap.org/data/2.5/forecast?" + "lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
+                var weatherUrl = "https://api.openweathermap.org/data/2.5/forecast?" + "lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + apiKey;
 
                 fetch(weatherUrl)
                     .then(function (res) {
@@ -68,17 +71,20 @@ $(document).ready(function () {
                         }
 
                         var forecastData = weatherData.list;
-                        for (var i = 0; i < forecastData.length; i++) {
+                        for (var i = 0, j = 1; i < forecastData.length; i += 8, j++) {
                             var forecast = forecastData[i];
                             var futureDate = dayjs(forecast.dt_txt).format("dddd");
                             var iconUrl = "https://openweathermap.org/img/wn/" + forecast.weather[0].icon + ".png";
+                            $("#city-date" + j).text(futureDate);
+                            //*
 
-                            var futureContainer = $(".future").eq(i);
-                            futureContainer.find(".city-date").text(futureDate);
+                            var futureContainer = $(".future").eq(j - 1);
+                            //  futureContainer.find("#city-date" + j).text(futureDate);
                             futureContainer.find(".weather-icon").attr("src", iconUrl);
-                            futureContainer.find(".city-temp").text(`${forecast.main.temp}°C`);
-                            futureContainer.find(".city-wind").text(`Wind: ${forecast.wind.speed} Km/h`);
+                            futureContainer.find(".city-temp").text(`${forecast.main.temp}°F`);
+                            futureContainer.find(".city-wind").text(`Wind: ${forecast.wind.speed} Mph`);
                             futureContainer.find(".city-humidity").text(`Humidity: ${forecast.main.humidity}%`);
+                            // */
                         }
 
 
