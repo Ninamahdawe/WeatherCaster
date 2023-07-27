@@ -104,13 +104,6 @@ $(document).ready(function () {
     }
 });
 
-
-
-
-
-
-
-
     // this is the data that should contain lat and lon
     // use the data to make another fetch request to a different endpoint for the actuall weather data.
     // follow the fetch().then() syntax above again

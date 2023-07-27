@@ -6,6 +6,8 @@ The Weather Caster is a weather application designed to provide you with real-ti
 
 # # Usage
 
+![link to deployed website](https://ninamahdawe.github.io/WeatherCaster/)
+
 ## source code
 
 source code is located in assets.
