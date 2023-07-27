@@ -14,6 +14,12 @@ body {
   transition: 500ms;
   opacity: 1;
 }
+p.lead {
+  font-weight: bold;
+  font-size: 30px;
+  color: #eee;
+  border-radius: 3px;
+}
 
 section.Forecast {
   display: flex;
@@ -28,6 +34,11 @@ section.Forecast {
   padding: 20px;
 }
 
+p#currentDay.lead {
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 .Forecast h1,
 p#cityname {
   font-size: 28px;
@@ -35,12 +46,16 @@ p#cityname {
   margin-top: 20px;
   text-align: center;
   color: #ffffff;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .temperature {
   font-size: 48px;
   margin: 10px 0;
   color: #ffffff;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .section1 {
@@ -56,7 +71,11 @@ p#cityname {
   margin: 20px auto;
   border: 1px solid #eee;
 }
-
+p#inputcontainer {
+  font-weight: bold;
+  font-size: 30px;
+  color: #ffffff;
+}
 #inputcontainer {
   display: flex;
   align-items: center;
@@ -72,6 +91,7 @@ input#cityinput {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-right: 20px;
+  transform: translateX(20px);
 }
 
 input#cityinput:hover {
@@ -89,7 +109,7 @@ button {
   cursor: pointer;
   margin-left: 20px;
   margin: 0 5px;
-  transform: translateX(-80px) translateY(3px);
+  transform: translateX(-80px) translateY(4px);
 }
 
 button#clear-button.clear-btn {
@@ -145,7 +165,7 @@ button:hover {
   color: white;
   align-items: center;
   margin: 0;
-  transform: translateX(-50px);
+  transform: translateX(-40px);
   gap: 30px;
 }
 
@@ -165,7 +185,6 @@ button:hover {
 .future-results {
   display: flex;
   border: 1px solid #eee;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 10px;
@@ -173,8 +192,39 @@ button:hover {
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
   transform: translateX(40px) translateY(30px);
+  width: calc(20% - 20px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
 }
 
 h3 {
   font-size: 40px;
+}
+
+/* Styles for mobile and tablet screens */
+@media (max-width: 768px) {
+  .section1 {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .future-container {
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(0);
+    gap: 15px;
+  }
+
+  .future-results {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+    transform: translateX(0) translateY(0);
+  }
+
+  .today-container,
+  .today {
+    width: 90%;
+  }
 }
