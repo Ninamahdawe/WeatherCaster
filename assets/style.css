@@ -96,6 +96,8 @@ p#city-temp.city-temp {
 
 .section1 {
   display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
   justify-content: space-between;
   align-items: flex-start;
   background: rgba(0, 0, 0, 0.2);
