@@ -20,7 +20,7 @@ The Weather Caster is a weather application designed to provide you with real-ti
 
 * Remember that this app uses the OpenWeatherMap API to fetch weather data. So, it requires an active internet connection to retrieve the latest weather information. Enjoy exploring the weather forecast for various cities with this app!
 
-![website screenshot](/assets/images/weathercaster.png)
+![website screenshot](/assets/images/WeatherCaster_.png)
 
 https://ninamahdawe.github.io/WeatherCaster/
 
