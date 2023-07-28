@@ -1,7 +1,5 @@
 ## Weather Caster
 
-![link](https://ninamahdawe.github.io/WeatherCaster/)
-
 ## Description
 
 The Weather Caster is a weather application designed to provide you with real-time and accurate weather forecasts, making it your go-to app for all things weather-related. Whether you're planning a weekend getaway or a hiking trip this app has got you covered!
@@ -23,6 +21,8 @@ The Weather Caster is a weather application designed to provide you with real-ti
 * Remember that this app uses the OpenWeatherMap API to fetch weather data. So, it requires an active internet connection to retrieve the latest weather information. Enjoy exploring the weather forecast for various cities with this app!
 
 ![website screenshot](/assets/images/WeatherCaster_.png)
+
+https://ninamahdawe.github.io/WeatherCaster/
 
 ## source code
 
