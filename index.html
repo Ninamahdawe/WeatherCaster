@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+    <!-- Current weather forecast section -->
   <section class="today-container">
     <div id="today-forecast">
       <div class="today">
@@ -20,11 +21,16 @@
         <aside class="temperature">50&deg;F</aside>
   </section>
 </div>
+
+  <!-- User input section  to search for the city-->
   <section class="section1">
     <p id="inputcontainer">City : <input type="text" id="cityinput" placeholder="Enter City" /></p>
+      <!-- User input section  to clear the search -->
     <button id="search">Search City</button>
     <button class="clear-btn" type="submit" id="clear-button">Clear Search</button>
     <div class="past-cities" id="cities-list">
+
+      <!-- Predefined cities with data-city button on the website -->
       <button data-city="California">California</button>
       <button data-city="paris">Paris</button>
       <button data-city="dubai">Dubai</button>
@@ -32,8 +38,9 @@
     </div>
   </section>
   <h3>5 Day Forecast</h3>
+    <!-- Container for the 5-day forecast -->
   <div class="future-container ">
-
+    <!-- Forecast entry for day 1 -->
     <div class="future-results">
       <div class="future">
         <p class="city-date" id="city-date1">Monday</p>
@@ -45,7 +52,7 @@
         </div>
       </div>
     </div>
-
+    <!-- Forecast entry for day 2 -->
     <div class="future-results">
       <div class="future">
         <p class="city-date" id="city-date2">Tue</p>
@@ -57,7 +64,7 @@
         </div>
       </div>
     </div>
-
+    <!-- Forecast entry for day 3 -->
     <div class="future-results">
       <div class="future">
         <p class="city-date" id="city-date3">Wed</p>
@@ -69,7 +76,7 @@
         </div>
       </div>
     </div>
-
+    <!-- Forecast entry for day 4 -->
     <div class="future-results">
       <div class="future">
         <p class="city-date" id="city-date4">Thus</p>
@@ -82,7 +89,7 @@
       </div>
 
     </div>
-
+    <!-- Forecast entry for day 5 -->
     <div class="future-results">
       <div class="future">
         <p class="city-date" id="city-date5">Fri</p>
@@ -98,7 +105,7 @@
   </div>
 
   </div>
-
+  <!-- External JavaScript libraries and custom script file -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>

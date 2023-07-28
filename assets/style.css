@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+/* Styling for the body element */
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -14,6 +15,7 @@ body {
   transition: 500ms;
   opacity: 1;
 }
+/* Styling for top page of the dashboard */
 
 p.lead {
   font-weight: bold;
@@ -21,6 +23,8 @@ p.lead {
   color: #eee;
   border-radius: 3px;
 }
+
+/* Styling for  the sections 'Forecast' */
 
 section.Forecast {
   display: flex;
@@ -35,11 +39,15 @@ section.Forecast {
   padding: 20px;
 }
 
+/* Styling for the current date on the top section of the website */
+
 p#currentDay.lead {
   justify-content: center;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Styling for heading section of the top page  */
 
 .Forecast h1,
 p#cityname {
@@ -83,6 +91,9 @@ p#city-temp.city-temp {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Styling for the second box on the page ' */
+
 .section1 {
   display: flex;
   justify-content: space-between;
@@ -96,6 +107,8 @@ p#city-temp.city-temp {
   margin: 20px auto;
   border: 1px solid #eee;
 }
+
+/* Styling for the text input section 'inputcontainer' */
 
 p#inputcontainer {
   font-weight: bold;
@@ -121,10 +134,14 @@ input#cityinput {
   transform: translateX(20px);
 }
 
+/* Styling for  input text area when you hover on the area */
+
 input#cityinput:hover {
   background: #ff8c10;
   cursor: pointer;
 }
+
+/* Styling for search button  and clear-button  */
 
 button#search {
   justify-content: space-between;
