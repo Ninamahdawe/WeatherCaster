@@ -248,3 +248,11 @@ h3 {
   min-width: 400px;
   margin: 10px 0;
 }
+p#city-wind.city-wind {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-top: -70px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
