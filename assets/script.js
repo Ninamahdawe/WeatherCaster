@@ -6,6 +6,10 @@ $(document).ready(function () {
     var searchButton = $("#search");
     var clearButton = $("#clear-button");
     var pastCitiesButtons = $("#cities-list button");
+    var pastCitiesContainer = $("#cities-list")
+
+
+
 
     // To get the current date using dayjs library and display it in a Month/Day format.
     var currentHeaderDate = dayjs().format("dddd, MMMM DD  ");
@@ -15,21 +19,8 @@ $(document).ready(function () {
 
     searchButton.click(function () {
         console.log("search button clicked");
-
-        // Get the city name from the input field and remove whitespace.
-        const city = cityInput.val().trim();
-        var pastCities = JSON.parse(localStorage.getItem("city")) || [];
-        console.log("Past cities retrieved from local storage:", pastCities);
-
-        if (!Array.isArray(pastCities)) {
-            pastCities = [];
-        }
-        pastCities.push(city);
-        // Save the city name in local storage .
-        localStorage.setItem("city", JSON.stringify(pastCities));
-        console.log("Past cities saved to local storage:", pastCities);
-
         // city = "Dubai"
+        const city = cityInput.val().trim();
         if (city) {
             getWeatherData(city);
         }
@@ -74,14 +65,17 @@ $(document).ready(function () {
             })
             .then(function (data) {
                 console.log(data);
-
                 // If the data is empty or undefined, do no change.
                 if (!data || data.length === 0) {
+                    alert("city not found")
+                    return;
                 }
+                const cityName = data[0].name
+                saveCityLocal(cityName)
                 // Get the latitude and longitude from the data.
                 var lat = data[0].lat;
                 var lon = data[0].lon;
-
+                renderPastCityButtons()
                 var weatherUrl =
                     "https://api.openweathermap.org/data/2.5/forecast?" +
                     "lat=" +
@@ -149,6 +143,36 @@ $(document).ready(function () {
                     });
             });
     }
+    function renderPastCityButtons() {
+        var pastCities = JSON.parse(localStorage.getItem("city")) || [];
+        pastCitiesContainer.empty();
+        for (let i = 0; i < pastCities.length; i++) {
+            const newCity = pastCities[i];
+
+            var newButton = $('<button>').attr('data-city', newCity).text(newCity);
+            newButton.on("click", function () {
+                var city = $(this).data("city");
+                getWeatherData(city);
+            })
+            pastCitiesContainer.append(newButton)
+        }
+
+    }
+    renderPastCityButtons();
+    function saveCityLocal(city) {
+        var pastCities = JSON.parse(localStorage.getItem("city")) || [];
+        console.log("Past cities retrieved from local storage:", pastCities);
+        if (!pastCities.includes(city)) {
+            pastCities.push(city);
+            localStorage.setItem("city", JSON.stringify(pastCities));
+            console.log("Past cities saved to local storage:", pastCities);
+
+
+        }
+        // Save the city name in local storage .
+
+    }
+
 });
 
 // this is the data that should contain lat and lon
